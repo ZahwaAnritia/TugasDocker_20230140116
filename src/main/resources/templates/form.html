@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Form Input</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f2f5; padding: 40px; }
+        .form-container { background: white; max-width: 600px; margin: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background-color: #f8f9fa; padding: 20px; border-bottom: 1px solid #eee; }
+        .header h2 { margin: 0; font-size: 1.2rem; color: #333; }
+        .content { padding: 30px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; color: #555; }
+        input[type="text"] { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        .radio-group { margin-bottom: 25px; border: 1px solid #f1f1f1; padding: 15px; border-radius: 5px; }
+        .radio-item { margin-bottom: 10px; display: flex; align-items: center; }
+        .radio-item input { margin-right: 10px; width: auto; }
+        .btn-submit { background-color: #007bff; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1rem; }
+        .btn-submit:hover { background-color: #0056b3; }
+        .back-link { display: inline-block; margin-top: 20px; color: #007bff; text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
+<div class="form-container">
+    <div class="header">
+        <h2>Form Input Mahasiswa</h2>
+    </div>
+    <div class="content">
+        <form th:action="@{/save}" th:object="${user}" method="post">
+            <label>Nama Lengkap:</label>
+            <input type="text" th:field="*{nama}" required>
 
+            <label>NIM:</label>
+            <input type="text" th:field="*{nim}" required>
+
+            <label>Jenis Kelamin:</label>
+            <div class="radio-group">
+                <div class="radio-item">
+                    <input type="radio" th:field="*{jenisKelamin}" value="Laki-laki" id="l" checked>
+                    <label for="l" style="margin:0; font-weight:normal;">Laki-laki</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" th:field="*{jenisKelamin}" value="Perempuan" id="p">
+                    <label for="p" style="margin:0; font-weight:normal;">Perempuan</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit Data</button>
+        </form>
+        <a th:href="@{/home}" class="back-link">← Kembali ke Halaman Utama</a>
+    </div>
+</div>
 </body>
 </html>
