@@ -1,3 +1,4 @@
+
 # Tugas Praktikum 6
 
 Tugas :
@@ -10,7 +11,8 @@ teman)
 teman)
 <img width="960" height="503" alt="Screenshot 2026-04-13 154315" src="https://github.com/user-attachments/assets/c6c99c0a-baee-4faa-b580-21b41033828c" />
 
-5.  Halaman web masing masing pastikan di run dari docker 4 screenshot :
+3.  Halaman web masing masing pastikan di run dari docker 4 screenshot :
+   
 • Halaman login
 <img width="960" height="476" alt="Screenshot 2026-04-13 154347" src="https://github.com/user-attachments/assets/797de534-d764-45e1-8438-12f350185bf5" />
 
@@ -24,6 +26,8 @@ teman)
 <img width="960" height="480" alt="Screenshot 2026-04-13 154427" src="https://github.com/user-attachments/assets/0f1c8aca-0629-42a9-b966-3743b54ccf56" />
 
 4. Halaman web teman yang di pull 4 screenshot:
+
+   <img width="960" height="508" alt="Screenshot 2026-04-13 155851" src="https://github.com/user-attachments/assets/b4773701-0665-4bed-893f-d7826b5df8f4" />
    
 • Halaman login
 <img width="957" height="482" alt="Screenshot 2026-04-13 154818" src="https://github.com/user-attachments/assets/a20ecb81-aed7-4727-901a-b77ebf0bfc7e" />
