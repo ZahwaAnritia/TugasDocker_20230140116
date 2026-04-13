@@ -37,4 +37,29 @@ public class UserController {
         return "login";
     }
 
+    @GetMapping("/home")
+    public String homePage(Model model) {
+
+        model.addAttribute("listMhs", listMahasiswa);
+        model.addAttribute("nimSaya", NIM_SAYA);
+        return "home";
+    }
+
+    @GetMapping("/form")
+    public String formPage(Model model) {
+        model.addAttribute("user", new User());
+        return "form";
+    }
+
+
+    @PostMapping("/save")
+    public String submitForm(@ModelAttribute User user) {
+        listMahasiswa.add(user);
+        return "redirect:/home";
+    }
+
+    @GetMapping("/logout")
+    public String logout() {
+        return "redirect:/login";
+    }
 }
